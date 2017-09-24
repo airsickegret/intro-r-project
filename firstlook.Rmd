@@ -1,0 +1,53 @@
+---
+title: "Software Carpentry"
+author: "Caleb Sponheim"
+date: "9/24/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+## First Sub-heading
+
+### First sub-sub-heading
+
+This is how you **bold** words, and _italicize_ things.
+
+This is how you create lists:
+
+* My name is Caleb
+* I don't know if I really like Marie or not
+* I may just not be over Allie yet
+
+Here is an equation:
+
+$$  f(x)=x^2  $$
+
+## Embedding R Code:
+
+```{r normal_hist, echo=FALSE}
+# Simulate 100 normal random variables
+
+x <- rnorm(100)
+
+hist(x)
+
+```
+
+```{r read_data}
+
+dat <- read.csv("data/inflammation-01.csv", header = FALSE)
+
+```
+
+```{r plot_analysis}
+avg_day_inflammation <- apply(dat, 2, mean)
+plot(avg_day_inflammation, 
+     xlab = "Day",
+     ylab = "Inflammation",
+     main = "Average Daily Inflammation")
+```
