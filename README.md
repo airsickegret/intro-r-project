@@ -1,4 +1,4 @@
 # intro-r-project
 Base repo for SWC workshop
 
-Test again again
+This was typed with the "nano" text editor. Isn't it amazing?!? We're saving with Nano!
